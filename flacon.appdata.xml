@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2016 Ilya Gradina <ilya.gradina@gmail.com> -->
+
+<application>
+	<id type="desktop">flacon.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>LGPL-2.1</project_license>
+	<name>Flacon</name>
+	<summary>A tool to extract individual tracks from one big audio file using CUE</summary>
+	<description>
+		<p>Flacon extracts individual tracks from one big audio file 
+                   containing the entire album of music and saves them as 
+                   separate audio files.  To do this, it uses information from 
+                   the appropriate CUE file.</p>
+		<p>Besides that, Flacon makes it possible to conveniently 
+                   revise or specify tags both for all tracks at once or for each tag separately.</p>
+                <p>Features:</p>
+                <ul>
+                  <li>Supported input formats: WAV, FLAC, APE, WavPack, True Audio (TTA)</li>
+                  <li>Supported out formats: FLAC, WAV, WavPack, AAC, OGG or MP3</li>
+                  <li>Replay Gain analysis (album-gain and track-gain modes)</li>
+                  <li>Multi-threaded conversion process</li>
+                  <li>Automatic character set detection for CUE files</li>
+                  <li>Generation of the pertrack CUE file in the output dir</li>	
+                </ul>
+	</description>
+	<keywords>cue,extract,track,music,sound,tag</keywords>
+	<url type="homepage">https://flacon.github.io</url>
+        <screenshots>
+		<screenshot type="default">https://github.com/ilgrad/fedora-packages/raw/master/flacon/flacon1.png</screenshot>
+                <screenshot>https://github.com/ilgrad/fedora-packages/raw/master/flacon/flacon2.png</screenshot>
+                <screenshot>https://github.com/ilgrad/fedora-packages/raw/master/flacon/flacon3.png</screenshot>
+	</screenshots>
+	<updatecontact>ilya.gradina@gmail.com</updatecontact>
+</application>
