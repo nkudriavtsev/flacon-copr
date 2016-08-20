@@ -31,9 +31,9 @@
           <keyword>wav</keyword>
           <keyword>ape</keyword>
         </keywords>
-	<url type="homepage">https://flacon.github.io/</url>
-        <url type="donation">https://flacon.github.io/donate/</url>
-        <url type="translate">https://github.com/flacon/flacon/wiki/How-to-translate/</url>
+	<url type="homepage">https://flacon.github.io</url>
+        <url type="donation">https://flacon.github.io/donate</url>
+        <url type="translate">https://www.transifex.com/sokoloff/flacon</url>
         <screenshots>
 		<screenshot type="default">https://github.com/ilgrad/fedora-packages/raw/master/flacon/flacon1.png</screenshot>
                 <screenshot>https://github.com/ilgrad/fedora-packages/raw/master/flacon/flacon2.png</screenshot>
