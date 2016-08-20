@@ -1,6 +1,6 @@
 Name:          flacon
 Version:       2.0.1
-Release:       4%{?dist}
+Release:       5%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -90,6 +90,9 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Wed Aug 17 2016 Ilya Gradina <ilya.gradina@gmail.com> - 2.0.1-5
+- changes in appdata file
+
 * Tue May 10 2016 Ilya Gradina <ilya.gradina@gmail.com> - 2.0.1-4
 - remove the requires libfishsound
 - changes in the appdata.xml file
