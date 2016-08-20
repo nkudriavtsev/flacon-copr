@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2016 Ilya Gradina <ilya.gradina@gmail.com> -->
-
 <application>
 	<id type="desktop">flacon.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
@@ -31,9 +30,7 @@
           <keyword>wav</keyword>
           <keyword>ape</keyword>
         </keywords>
-	<url type="homepage">https://flacon.github.io</url>
-        <url type="donation">https://flacon.github.io/donate</url>
-        <url type="translate">https://www.transifex.com/sokoloff/flacon</url>
+        <url type="homepage">https://flacon.github.io/</url>
         <screenshots>
 		<screenshot type="default">https://github.com/ilgrad/fedora-packages/raw/master/flacon/flacon1.png</screenshot>
                 <screenshot>https://github.com/ilgrad/fedora-packages/raw/master/flacon/flacon2.png</screenshot>
