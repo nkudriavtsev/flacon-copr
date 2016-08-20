@@ -90,7 +90,7 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
-* Wed Aug 16 2016 Ilya Gradina <ilya.gradina@gmail.com> - 2.0.1-5
+* Wed Aug 17 2016 Ilya Gradina <ilya.gradina@gmail.com> - 2.0.1-5
 - changes in appdata file
 
 * Tue May 10 2016 Ilya Gradina <ilya.gradina@gmail.com> - 2.0.1-4
