@@ -1,6 +1,6 @@
 Name:          flacon
-Version:       2.0.1
-Release:       5%{?dist}
+Version:       2.1.0
+Release:       1%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -90,6 +90,9 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Thu Nov 10 2016 Ilya Gradina <ilay.gradina@gmail.com> - 2.1.0-1
+- update to 2.1.0
+
 * Wed Aug 17 2016 Ilya Gradina <ilya.gradina@gmail.com> - 2.0.1-5
 - changes in appdata file
 
