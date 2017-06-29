@@ -1,5 +1,5 @@
 Name:          flacon
-Version:       2.1.1
+Version:       3.0.0
 Release:       1%{?dist}
 Summary:       Audio File Encoder
 
@@ -19,7 +19,6 @@ Requires: flac
 Requires: opus-tools
 Requires: vorbisgain
 Requires: vorbis-tools
-Requires: shntool
 Requires: wavpack
 
 
@@ -90,6 +89,12 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Thu Jun 29 2017 Ilya Gradina <ilya.gradina@gmail.com> - 3.0.0-1
+- update to 3.0.0
+
+* Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 2.1.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Wed Dec 28 2016 Ilya Gradina <ilya.gradina@gmail.com> - 2.1.1-1
 - update to 2.1.1
 
