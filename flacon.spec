@@ -1,6 +1,6 @@
 Name:          flacon
 Version:       3.0.0
-Release:       1%{?dist}
+Release:       2%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -89,6 +89,9 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Wed Jul 26 2017 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
 * Thu Jun 29 2017 Ilya Gradina <ilya.gradina@gmail.com> - 3.0.0-1
 - update to 3.0.0
 
