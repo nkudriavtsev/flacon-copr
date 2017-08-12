@@ -1,6 +1,6 @@
 Name:          flacon
-Version:       3.0.0
-Release:       3%{?dist}
+Version:       3.1.1
+Release:       1%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -20,6 +20,7 @@ Requires: opus-tools
 Requires: vorbisgain
 Requires: vorbis-tools
 Requires: wavpack
+Requires: lame
 
 
 %description
@@ -89,6 +90,9 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Sat Aug 12 2017 Ilya Gradina <ilya.gradina@gmail.com> - 3.1.1-1
+- update to 3.1.1
+
 * Wed Aug 02 2017 Fedora Release Engineering <releng@fedoraproject.org> - 3.0.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Binutils_Mass_Rebuild
 
