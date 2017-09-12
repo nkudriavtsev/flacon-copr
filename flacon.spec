@@ -1,14 +1,12 @@
 Name:          flacon
 Version:       3.1.1
-Release:       2%{?dist}
+Release:       3%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
 URL:           https://flacon.github.io/
 Source0:       https://github.com/%{name}/%{name}/archive/v%{version}.tar.gz
 Source1:       %{name}.appdata.xml
-
-ExcludeArch:   ppc64
 
 BuildRequires: desktop-file-utils
 BuildRequires: cmake
@@ -92,6 +90,9 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Tue Sep 12 2017 Than Ngo <than@redhat.com> - 3.1.1-3
+- enable build on ppc64
+
 * Mon Sep 11 2017 Ilya Gradina <ilya.gradina@gmail.com> - 3.1.1-2
 - fix build on ppc64 
 
