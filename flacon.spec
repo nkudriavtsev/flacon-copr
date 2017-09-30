@@ -1,6 +1,6 @@
 Name:          flacon
 Version:       3.1.1
-Release:       3%{?dist}
+Release:       4%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -90,6 +90,9 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
+* Sun Oct 01 2017 Ilya Gradina <ilya.gradina@gmail.com> - 3.1.1-4
+- rebuilt package
+
 * Tue Sep 12 2017 Than Ngo <than@redhat.com> - 3.1.1-3
 - enable build on ppc64
 
