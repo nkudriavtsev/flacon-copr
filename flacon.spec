@@ -66,7 +66,7 @@ tags both for all tracks at once or for each tag separately.
 mkdir -p %{_target_platform}
 pushd %{_target_platform}
 %cmake  \
-    -DBUILD_TESTS=Yes \
+    -DBUILD_TESTS=%{?with_tests:Yes}%{!?with_tests:No} \
     -DUSE_QT5=Yes \
     ..
 popd
