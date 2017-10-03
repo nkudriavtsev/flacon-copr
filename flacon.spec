@@ -1,3 +1,6 @@
+# Disable tests because some of the tools are not available in Fedora
+%bcond_with tests
+
 Name:          flacon
 Version:       3.1.1
 Release:       4%{?dist}
@@ -56,10 +59,9 @@ cp -a %{SOURCE1} %{buildroot}%{_datadir}/appdata
 %check
 appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/%{name}.appdata.xml
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
-pushd %{_target_platform}
-    cd tests && ./flacon_test || :
-popd
-
+%if %{with tests}
+cd %{_target_platform}/tests && ./flacon_test
+%endif
 
 %post
 touch --no-create %{_datadir}/icons/hicolor &>/dev/null ||:
