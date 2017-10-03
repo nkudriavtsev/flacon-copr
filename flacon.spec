@@ -17,6 +17,13 @@ BuildRequires: libappstream-glib
 BuildRequires: qt5-linguist
 BuildRequires: qt5-qtbase-devel
 BuildRequires: uchardet-devel
+%if %{with tests}
+# Test deps
+BuildRequires:  %{_bindir}/mac
+BuildRequires:  %{_bindir}/flac
+BuildRequires:  %{_bindir}/wavpack
+BuildRequires:  %{_bindir}/ttaenc
+%endif
 
 Requires: flac
 Requires: opus-tools
