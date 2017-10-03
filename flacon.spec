@@ -43,11 +43,11 @@ pushd %{_target_platform}
     -DUSE_QT5=Yes \
     ..
 popd
-make %{?_smp_mflags} -C %{_target_platform}
+%make_build -C %{_target_platform}
 
 
 %install
-make install DESTDIR=%{buildroot} -C %{_target_platform}
+%make_install -C %{_target_platform}
 mkdir -p %{buildroot}%{_datadir}/appdata 
 cp -a %{SOURCE1} %{buildroot}%{_datadir}/appdata
 %find_lang %{name} --with-qt
