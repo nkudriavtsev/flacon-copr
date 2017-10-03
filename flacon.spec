@@ -11,12 +11,13 @@ URL:           https://flacon.github.io/
 Source0:       https://github.com/%{name}/%{name}/archive/v%{version}.tar.gz
 Source1:       %{name}.appdata.xml
 
-BuildRequires:  desktop-file-utils
 BuildRequires:  cmake
-BuildRequires:  libappstream-glib
 BuildRequires:  qt5-linguist
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  uchardet-devel
+# For %%check
+BuildRequires:  %{_bindir}/appstream-util
+BuildRequires:  %{_bindir}/desktop-file-validate
 %if %{with tests}
 # Test deps
 BuildRequires:  %{_bindir}/mac
