@@ -11,12 +11,12 @@ URL:           https://flacon.github.io/
 Source0:       https://github.com/%{name}/%{name}/archive/v%{version}.tar.gz
 Source1:       %{name}.appdata.xml
 
-BuildRequires: desktop-file-utils
-BuildRequires: cmake
-BuildRequires: libappstream-glib
-BuildRequires: qt5-linguist
-BuildRequires: qt5-qtbase-devel
-BuildRequires: uchardet-devel
+BuildRequires:  desktop-file-utils
+BuildRequires:  cmake
+BuildRequires:  libappstream-glib
+BuildRequires:  qt5-linguist
+BuildRequires:  qt5-qtbase-devel
+BuildRequires:  uchardet-devel
 %if %{with tests}
 # Test deps
 BuildRequires:  %{_bindir}/mac
@@ -59,10 +59,8 @@ To do this, it uses information from the appropriate CUE file.
 Besides, Flacon makes it possible to conveniently revise or specify 
 tags both for all tracks at once or for each tag separately.
 
-
 %prep
 %autosetup
-
 
 %build
 mkdir -p %{_target_platform}
@@ -74,13 +72,11 @@ pushd %{_target_platform}
 popd
 %make_build -C %{_target_platform}
 
-
 %install
 %make_install -C %{_target_platform}
 mkdir -p %{buildroot}%{_datadir}/appdata 
 cp -a %{SOURCE1} %{buildroot}%{_datadir}/appdata
 %find_lang %{name} --with-qt
-
 
 %check
 appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/%{name}.appdata.xml
@@ -101,7 +97,6 @@ fi
 %posttrans
 gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
-
 %files 
 %doc README.md
 %license LICENSE
@@ -111,7 +106,6 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/%{name}.*
 %{_mandir}/man1/%{name}.1.*
-
 
 %changelog
 * Sun Oct 01 2017 Ilya Gradina <ilya.gradina@gmail.com> - 3.1.1-4
