@@ -12,6 +12,7 @@ Source0:       https://github.com/%{name}/%{name}/archive/v%{version}.tar.gz
 Source1:       %{name}.appdata.xml
 
 BuildRequires:  cmake
+BuildRequires:  gcc-c++
 BuildRequires:  qt5-linguist
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  uchardet-devel
