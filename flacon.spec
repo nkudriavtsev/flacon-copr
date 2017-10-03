@@ -25,13 +25,32 @@ BuildRequires:  %{_bindir}/wavpack
 BuildRequires:  %{_bindir}/ttaenc
 %endif
 
-Requires: flac
-Requires: opus-tools
-Requires: vorbisgain
-Requires: vorbis-tools
-Requires: wavpack
-Requires: lame
-
+# formats/aac.h (encoder)
+Recommends:     %{_bindir}/faac
+# formats/ape.h (decoder)
+Recommends:     %{_bindir}/mac
+# formats/flac.h (encoder, decoder)
+Recommends:     %{_bindir}/flac
+# formats/flac.h (gain)
+Recommends:     %{_bindir}/metaflac
+# formats/mp3.h (encoder)
+Recommends:     %{_bindir}/lame
+# formats/mp3.h (gain)
+Recommends:     %{_bindir}/mp3gain
+# formats/ogg.h (encoder)
+Recommends:     %{_bindir}/oggenc
+# formats/ogg.h (gain)
+Recommends:     %{_bindir}/vorbisgain
+# formats/opus.h (encoder)
+Recommends:     %{_bindir}/opusenc
+# formats/tta.h (decoder)
+Recommends:     %{_bindir}/ttaenc
+# formats/wv.h (encoder)
+Recommends:     %{_bindir}/wavpack
+# formats/wc.h (decoder)
+Recommends:     %{_bindir}/wvunpack
+# formats/wc.h (gain)
+Recommends:     %{_bindir}/wvgain
 
 %description
 Flacon extracts individual tracks from one big audio file containing
