@@ -2,19 +2,21 @@
 %bcond_with tests
 
 Name:          flacon
-Version:       3.1.1
-Release:       4%{?dist}
+Version:       4.0.0
+Release:       1%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
 URL:           https://flacon.github.io/
-Source0:       https://github.com/%{name}/%{name}/archive/v%{version}.tar.gz
+Source0:       https://github.com/%{name}/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 Source1:       %{name}.appdata.xml
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
-BuildRequires:  qt5-linguist
-BuildRequires:  qt5-qtbase-devel
+BuildRequires:  cmake(Qt5Core)
+BuildRequires:  cmake(Qt5Widgets)
+BuildRequires:  cmake(Qt5Network)
+BuildRequires:  cmake(Qt5LinguistTools)
 BuildRequires:  uchardet-devel
 # For %%check
 BuildRequires:  %{_bindir}/appstream-util
@@ -67,10 +69,7 @@ tags both for all tracks at once or for each tag separately.
 %build
 mkdir -p %{_target_platform}
 pushd %{_target_platform}
-%cmake  \
-    -DBUILD_TESTS=%{?with_tests:Yes}%{!?with_tests:No} \
-    -DUSE_QT5=Yes \
-    ..
+%cmake .. -DBUILD_TESTS=%{?with_tests:Yes}%{!?with_tests:No}
 popd
 %make_build -C %{_target_platform}
 
@@ -99,17 +98,21 @@ fi
 %posttrans
 gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 
-%files 
+%files -f %{name}.lang
 %doc README.md
 %license LICENSE
 %{_bindir}/%{name}
-%{_datadir}/%{name}
+%dir %{_datadir}/%{name}
+%dir %{_datadir}/%{name}/translations
 %{_datadir}/appdata/%{name}.appdata.xml
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/*/*/%{name}.*
-%{_mandir}/man1/%{name}.1.*
+%{_datadir}/icons/hicolor/*/apps/%{name}.*
+%{_mandir}/man1/%{name}.1*
 
 %changelog
+* Sun Dec 24 2017 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 4.0.0-1
+- Update to 4.0.0
+
 * Sun Oct 01 2017 Ilya Gradina <ilya.gradina@gmail.com> - 3.1.1-4
 - rebuilt package
 
