@@ -3,7 +3,7 @@
 
 Name:          flacon
 Version:       4.0.0
-Release:       1%{?dist}
+Release:       1%{?dist}.1
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -86,18 +86,6 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 cd %{_target_platform}/tests && ./flacon_test
 %endif
 
-%post
-touch --no-create %{_datadir}/icons/hicolor &>/dev/null ||:
-
-%postun
-if [ $1 -eq 0 ] ; then 
-    touch --no-create %{_datadir}/icons/hicolor &>/dev/null
-    gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
-fi
-
-%posttrans
-gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
-
 %files -f %{name}.lang
 %doc README.md
 %license LICENSE
@@ -110,6 +98,9 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor &>/dev/null || :
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Fri Jan 05 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 4.0.0-1.1
+- Remove obsolete scriptlets
+
 * Sun Dec 24 2017 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 4.0.0-1
 - Update to 4.0.0
 
