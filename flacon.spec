@@ -3,7 +3,7 @@
 
 Name:          flacon
 Version:       4.0.0
-Release:       1%{?dist}.1
+Release:       2%{?dist}.1
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -98,6 +98,9 @@ cd %{_target_platform}/tests && ./flacon_test
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 4.0.0-2.1
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Fri Jan 05 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 4.0.0-1.1
 - Remove obsolete scriptlets
 
