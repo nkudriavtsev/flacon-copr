@@ -2,8 +2,8 @@
 %bcond_with tests
 
 Name:          flacon
-Version:       4.0.0
-Release:       2%{?dist}.1
+Version:       4.1.0
+Release:       1%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -98,6 +98,9 @@ cd %{_target_platform}/tests && ./flacon_test
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Mon Jun 25 2018 Ilya Gradina <ilya.gradina@gmail.com> - 4.1.0-1
+- Update to 4.1.0
+
 * Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 4.0.0-2.1
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
