@@ -2,8 +2,8 @@
 %bcond_with tests
 
 Name:          flacon
-Version:       5.4.0
-Release:       2%{?dist}
+Version:       5.5.1
+Release:       1%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -77,6 +77,7 @@ popd
 %make_install -C %{_target_platform}
 mkdir -p %{buildroot}%{_datadir}/appdata 
 cp -a %{SOURCE1} %{buildroot}%{_datadir}/appdata
+rm -r %{buildroot}%{_datadir}/metainfo
 %find_lang %{name} --with-qt
 
 %check
@@ -98,6 +99,9 @@ cd %{_target_platform}/tests && ./flacon_test
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Wed Oct 23 2019 Ilya Gradina <ilya.gradina@gmail.com> - 5.5.1-1
+- Update tp 5.5.1
+
 * Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 5.4.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
