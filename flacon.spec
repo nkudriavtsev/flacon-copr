@@ -2,8 +2,8 @@
 %bcond_with tests
 
 Name:          flacon
-Version:       5.5.1
-Release:       4%{?dist}
+Version:       6.1.0
+Release:       1%{?dist}
 Summary:       Audio File Encoder
 
 License:       LGPLv2+
@@ -99,6 +99,9 @@ cd %{_target_platform}/tests && ./flacon_test
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Wed Sep 09 2020 Nicholas Kudriavtsev - 6.1.0-1
+- Update to 6.1.0
+
 * Sat Aug 01 2020 Fedora Release Engineering <releng@fedoraproject.org> - 5.5.1-4
 - Second attempt - Rebuilt for
   https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
